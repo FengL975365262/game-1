@@ -1,0 +1,63 @@
+<!--pages/game/game.wxml-->
+<view style='background-color:#dadada'>
+<view>
+<text>得分：{{score}}</text>
+</view>
+<view class="divLine"></view>
+<view>
+<text>剩余时间：{{lastTime}} s</text>
+</view>
+<view class="divLine"></view>
+<view>
+<text>当前计算逻辑： {{mathLogic}}</text>
+</view>
+<view class="divLine"></view>
+<view>
+<text>当前数字组：</text>
+<view class="divLine"></view>
+</view>
+<view class="table">
+      <view class="tr">
+          <view class="th th-n th-{{index}}" wx:for="{{numbers}}" data-index="{{index}}">{{item}}</view>
+      </view>
+</view>
+<view>
+<view class="divLine"></view>
+<text>你的答案：{{rightResult}}</text>
+</view>
+<view class="divLine"></view>
+<view class="table" style='width:100%;background-color:white'>
+      <view class="tr" style='height:90px;background-color:white'>
+          <view class="th"style="height:100%;font-size:60px;background-color:red">{{result}}</view>
+      </view>
+</view>
+<view class="divLine"></view>
+<view class="container" style='margin-top:-80px;width=100%'>
+    <view class="table">
+        <view class="tr">
+            <view class="th" bindtap='inputResult' data-input='1'>1</view>
+            <view class="th" bindtap='inputResult' data-input='2'>2</view>
+            <view class="th" bindtap='inputResult' data-input='3'>3</view>
+            <view class="th" bindtap='inputResult' data-input='<'>后退</view>
+        </view>
+        <view class="tr">
+            <view class="th" bindtap='inputResult' data-input='4'>4</view>
+            <view class="th" bindtap='inputResult' data-input='5'>5</view>
+            <view class="th" bindtap='inputResult' data-input='6'>6</view>
+            <view class="th" bindtap='inputResult' data-input='z'>清空</view>
+        </view>
+        <view class="tr">
+            <view class="th" bindtap='inputResult' data-input='7'>7</view>
+            <view class="th" bindtap='inputResult' data-input='8'>8</view>
+            <view class="th" bindtap='inputResult' data-input='9'>9</view>
+            <view class="th" bindtap='inputResult' data-input='~'>跳过</view>
+        </view>
+        <view class="tr">
+            <view class="th" bindtap='inputResult' data-input='.'>.</view>
+            <view class="th" bindtap='inputResult' data-input='0'>0</view>
+            <view class="th" bindtap='inputResult' data-input='-'>-</view>
+            <view class="th" bindtap='inputResult' data-input='q'>确定</view>
+        </view>
+    </view>
+</view>
+</view>
